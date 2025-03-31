@@ -35,7 +35,10 @@ export default function LandingPage() {
           <h2 className="text-xl sm:text-2xl font-semibold mb-2">🚀 Cadastre-se para receber atualizações</h2>
           <p className="mb-3 sm:mb-4 text-sm sm:text-base">Conteúdos práticos, vídeos, templates e novidades sobre o mundo dos playbooks vivos.</p>
           <form action="https://formsubmit.co/mk@playbookvivo.com" method="POST" className="flex flex-col sm:flex-row gap-4 max-w-xl mx-auto">
+
             <input type="email" name="email" placeholder="Seu melhor e-mail" className="flex-1 border px-4 py-2 rounded-xl text-sm sm:text-base" required />
+            <input type="text" name="name" required>
+
             <button type="submit" className="bg-blue-600 text-white px-6 py-2 rounded-xl text-sm sm:text-base">Cadastrar</button>
           </form>
         </div>
