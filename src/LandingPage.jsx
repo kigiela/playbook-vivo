@@ -1,13 +1,13 @@
 export default function LandingPage() {
   return (
-    <div className="min-h-screen bg-white text-gray-900 px-4 py-8 sm:px-6 lg:px-8">
-      <div className="max-w-3xl mx-auto space-y-6">
-        <h1 className="text-3xl sm:text-4xl font-bold text-center">📘 Rituais. Processos. Consequências.</h1>
-        <p className="text-center text-lg font-medium">Como a Bíblia se tornou o playbook mais bem-sucedido da humanidade</p>
-        <p className="text-center text-base text-gray-600">Por Mauricio Kigiela</p>
+    <div className="min-h-screen bg-white text-gray-900 px-4 py-8 sm:px-6 lg:px-8 flex items-center justify-center">
+      <div className="max-w-3xl mx-auto space-y-6 text-center">
+        <h1 className="text-3xl sm:text-4xl font-bold">📘 Rituais. Processos. Consequências.</h1>
+        <p className="text-lg font-medium">Como a Bíblia se tornou o playbook mais bem-sucedido da humanidade</p>
+        <p className="text-base text-gray-600">Por Mauricio Kigiela</p>
 
-        <div className="space-y-4 text-sm sm:text-base">
-          <p><strong>✨ E se a Bíblia fosse o melhor playbook já escrito?</strong><br />
+        <div className="space-y-4 text-sm sm:text-base text-left mx-auto max-w-2xl">
+          <p className="text-center"><strong>✨ E se a Bíblia fosse o melhor playbook já escrito?</strong><br />
           Antes de qualquer planilha, ferramenta ou framework ágil… já existia um sistema que durava milênios. <br />
           Regras claras. Rituais padronizados. Narrativas fortes. Uma liderança que vive o que prega. <br />
           Esse sistema atravessou gerações, culturas, tecnologias e ainda funciona até hoje: a estrutura da Igreja Católica. <br />
@@ -62,8 +62,43 @@ export default function LandingPage() {
           </div>
 
           <p className="text-center text-sm text-gray-500 mt-8">🎧 Versão em podcast em breve · 🧰 Materiais extras disponíveis na área de recursos</p>
-        </div>
 
+          <hr className="my-10" />
+
+          <section className="grid md:grid-cols-2 gap-8 mt-10">
+            <div className="border rounded-2xl p-6 shadow-md">
+              <h2 className="text-xl sm:text-2xl font-semibold mb-2">📄 Prompts prontos para GPT</h2>
+              <p className="mb-4">Copie, adapte e cole no ChatGPT para criar agentes que respondem dúvidas sobre:</p>
+              <ul className="list-disc pl-5 space-y-1">
+                <li>Pessoas & Cultura</li>
+                <li>Vendas B2B</li>
+              </ul>
+              <a href="https://content.playbookvivo.com/agente_ia_cultura.json" className="inline-block mt-4 text-blue-600 underline" download>Baixar prompt de Cultura</a><br />
+              <a href="https://content.playbookvivo.com/agente_ia_vendas.json" className="inline-block mt-2 text-blue-600 underline" download>Baixar prompt de Vendas</a>
+            </div>
+
+            <div className="border rounded-2xl p-6 shadow-md">
+              <h2 className="text-xl sm:text-2xl font-semibold mb-2">🛠️ Workflows para n8n</h2>
+              <p className="mb-4">Importe no seu n8n e tenha um Agente de IA rodando em minutos:</p>
+              <ul className="list-disc pl-5 space-y-1">
+                <li>Agente de Cultura</li>
+                <li>Agente de Vendas</li>
+                <li>Agente Universal de Playbooks</li>
+              </ul>
+              <a href="https://content.playbookvivo.com/n8n_agente_ia_playbook.json" className="inline-block mt-4 text-blue-600 underline" download>Baixar workflow completo</a>
+            </div>
+
+            <div className="border rounded-2xl p-6 shadow-md md:col-span-2">
+              <h2 className="text-xl sm:text-2xl font-semibold mb-2">🚀 Cadastre-se para receber atualizações</h2>
+              <p className="mb-4">Conteúdos práticos, vídeos, templates e novidades sobre o mundo dos playbooks vivos.</p>
+              <form action="https://formsubmit.co/mk@playbookvivo.com" method="POST" className="flex flex-col sm:flex-row gap-4 max-w-xl mx-auto">
+                <input type="email" name="email" placeholder="Seu melhor e-mail" className="flex-1 border px-4 py-2 rounded-xl" required />
+                <button type="submit" className="bg-blue-600 text-white px-6 py-2 rounded-xl">Cadastrar</button>
+              </form>
+            </div>
+          </section>
+
+        </div>
       </div>
     </div>
   );
